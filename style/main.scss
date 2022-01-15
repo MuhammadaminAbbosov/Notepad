@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 600px;
+    height: calc(100vh - 100px);
+    box-shadow: 0 0 100px 0px #c850c0;
+    .wrapper {
+        width: 600px;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0 , 0 , 0.1);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    
+        .input-data {
+            height: 40px;
+            width: 100%;
+            position: relative;
+    
+            input {
+                height: 100%;
+                width: 100%;
+    
+                font-size: 17px;
+                padding: 4px 0 0 0;
+    
+                border: none;
+                outline: none   ;
+                border-bottom: 2px solid silver;
+    
+                &:focus {
+                    border-bottom: 2px solid #4158d0;
+                }
+    
+                &:valid {
+                    border-bottom: 2px solid #4158d0;
+                }
+            }
+    
+            input:focus ~ label,
+            input:valid ~ label {
+                transform: translateY(-20px);
+                font-size: 15px;
+                color: #4158d0;
+                font-weight: bold;
+            }
+    
+            label {
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                color: grey;
+                pointer-events: none;
+                transition: all 0.3s ease;
+                font-weight: bold;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4158d0;
+            color: white;
+            border: none;
+            box-shadow: none;
+            transition: 0.4s ease-in;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 6px 6px #001370;
+            }
+        }
+    }
+
+    ul {
+        height: 80%;
+        width: 100%;
+        background-color: white;
+        padding: 0 30px;
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;   
+            justify-content: space-between;  
+            border-bottom: 1px solid silver;
+            padding: 10px 0; 
+            
+            .check-box {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }   
+            
+            button {
+                display: none;
+                padding: 10px 20px;
+                background-color: #94a6ff;
+                color: white;
+                border: none;
+                box-shadow: none;
+                transition: 0.4s ease-in;
+    
+                &:hover {
+                    box-shadow: 6px 6px #677ff8;
+                }
+            }
+
+            .button-none {
+                display: block;
+                cursor: pointer;
+            }
+
+            .checked {
+                font-style: italic;
+                text-decoration: line-through;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        width: 80%;
+
+        .wrapper {
+            width: 100%;
+
+            padding: 20px;
+            gap: 20px;
+            flex-direction: column;
+
+            button {
+                width: 80%;
+            }
+        }
+    }
+}

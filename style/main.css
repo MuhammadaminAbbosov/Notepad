@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: calc(100vh - 100px);
+  -webkit-box-shadow: 0 0 100px 0px #c850c0;
+          box-shadow: 0 0 100px 0px #c850c0;
+}
+
+.container .wrapper {
+  width: 600px;
+  padding: 30px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.container .wrapper .input-data {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.container .wrapper .input-data input {
+  height: 100%;
+  width: 100%;
+  font-size: 17px;
+  padding: 4px 0 0 0;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid silver;
+}
+
+.container .wrapper .input-data input:focus {
+  border-bottom: 2px solid #4158d0;
+}
+
+.container .wrapper .input-data input:valid {
+  border-bottom: 2px solid #4158d0;
+}
+
+.container .wrapper .input-data input:focus ~ label,
+.container .wrapper .input-data input:valid ~ label {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  font-size: 15px;
+  color: #4158d0;
+  font-weight: bold;
+}
+
+.container .wrapper .input-data label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.container .wrapper button {
+  padding: 10px 20px;
+  background-color: #4158d0;
+  color: white;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+
+.container .wrapper button:hover {
+  -webkit-box-shadow: 6px 6px #001370;
+          box-shadow: 6px 6px #001370;
+}
+
+.container ul {
+  height: 80%;
+  width: 100%;
+  background-color: white;
+  padding: 0 30px;
+}
+
+.container ul li {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid silver;
+  padding: 10px 0;
+}
+
+.container ul li .check-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.container ul li button {
+  display: none;
+  padding: 10px 20px;
+  background-color: #94a6ff;
+  color: white;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+.container ul li button:hover {
+  -webkit-box-shadow: 6px 6px #677ff8;
+          box-shadow: 6px 6px #677ff8;
+}
+
+.container ul li .button-none {
+  display: block;
+  cursor: pointer;
+}
+
+.container ul li .checked {
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 80%;
+  }
+  .container .wrapper {
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .wrapper button {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
