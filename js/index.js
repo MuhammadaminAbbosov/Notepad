@@ -19,7 +19,6 @@ function erorChiqar() {
         input.style.borderBottomColor = "grey"
 
         input.style[focus] = "border-bottom: 2px solid #4158d0;"
-        input.style[valid] = "border-bottom: 2px solid #4158d0;"
     }, 1900)
 
 }
